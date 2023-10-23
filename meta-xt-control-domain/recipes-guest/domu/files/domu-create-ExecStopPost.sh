@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DOMD_ID=$(xl list | awk '{ if ($1 == "DomD") print $2 }') && \
 echo "Destroying DomU" && ( /usr/sbin/xl -v destroy DomU || true ) && echo "Destroyed DomU"; \
